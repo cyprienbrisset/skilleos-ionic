@@ -6,7 +6,11 @@ const routes: Routes = [
   {
     path: '',
     component: Tab1Page,
+  },  {
+    path: 'basket-documents',
+    loadChildren: () => import('./basket-documents/basket-documents.module').then( m => m.BasketDocumentsPageModule)
   }
+
 ];
 
 @NgModule({
